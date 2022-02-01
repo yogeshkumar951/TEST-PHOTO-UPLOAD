@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div><a href="{% url 'index' %}">Upload product</a></div>
+    
+    <h1>Gellery</h1>
+    <div>
+        {% for i in product %}
+        <div style="border: 2px solid black;padding: 5px;"><img style="height: 100px;height: 100px;" src="{{i.image.url}}" alt="">
+        <div>{{i.name}}</div>
+        <div>{{i.color}}</div>
+        <div>{{i.price}}</div>
+        <div>{{i.description}}</div>
+        </div><br>
+        {% endfor %}  
+
+    </div>
+
+    
+
+
+  
+
+
+    
+    
+</body>
+</html>
